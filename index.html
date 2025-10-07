@@ -1,95 +1,119 @@
-
-
 <!DOCTYPE html>
-<html lang="PT-br">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Taggo | Online Shopping</title>
-  <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- feather-icons -->
-  <script src="https://unpkg.com/feather-icons"></script>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taggo | Online Shopping</title>
+<link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
-
 <body class="bg-gray-50">
-  <!-- Top Navigation -->
-  <nav class="bg-primary text-white py-2 px-4">
-    <div class="container mx-auto flex justify-between items-center">
-      <div class="flex items-center space-x-4">
-        <a href="#" class="text-sm hover:underline">Seller Center</a>
-        <a href="#" class="text-sm hover:underline">Download</a>
-        <span class="text-sm">Follow us on</span>
-        <div class="flex space-x-2">
-          <a href="#"><i data-feather="facebook" class="w-4 h-4"></i></a>
-          <a href="#"><i data-feather="instagram" class="w-4 h-4"></i></a>
-        </div>
-      </div>
-      <div class="flex items-center space-x-4">
-        <a href="#" class="text-sm hover:underline">Notifications</a>
-        <a href="#" class="text-sm hover:underline">Help</a>
-        <a href="#" class="text-sm hover:underline">Register</a>
-        <a href="#" class="text-sm hover:underline">Login</a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Main Header -->
-  <header class="bg-white shadow-sm py-4">
-    <div class="container mx-auto flex items-center">
-      <!-- Logo -->
-      <div class="mr-8">
-        <a href="#" class="text-3xl font-bold text-primary">Taggo</a>
-      </div>
-
-      <!-- Search Bar -->
-      <div class="flex-1 relative">
-        <div class="flex">
-          <input type="text" placeholder="Search for products"
-            class="w-full py-2 px-4 border border-gray-300 rounded-l-md focus:outline-none focus:border-primary">
-          <button class="bg-primary text-white px-6 rounded-r-md hover:bg-opacity-90">
-            <i data-feather="search" class="w-5 h-5"></i>
-          </button>
-        </div>
-      </div>
-
-      <!-- Cart -->
-      <div class="ml-8 relative">
-        <a href="#" class="flex items-center">
-          <div class="relative">
-            <i data-feather="shopping-cart" class="w-6 h-6 text-gray-700"></i>
-            <span
-              class="absolute -top-2 -right-2 bg-primary text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">3</span>
+    <!-- Top Navigation -->
+    <nav class="bg-primary text-white py-2 px-4">
+      <div class="container mx-auto flex justify-between items-center">
+        <div class="hidden md:flex items-center space-x-4">
+          <a href="#" class="text-sm hover:underline">Seller Center</a>
+          <a href="#" class="text-sm hover:underline">Download</a>
+          <span class="text-sm hidden lg:inline">Follow us on</span>
+          <div class="hidden lg:flex space-x-2">
+            <a href="#"><i data-feather="facebook" class="w-4 h-4"></i></a>
+            <a href="#"><i data-feather="instagram" class="w-4 h-4"></i></a>
           </div>
-          <span class="ml-2">Cart</span>
-        </a>
-      </div>
-    </div>
-  </header>
-
-    <!-- Categories Navigation -->
-    <nav class="bg-white shadow-sm py-3">
-      <div class="container mx-auto flex items-center space-x-8 overflow-x-auto">
-        <a href="#" class="whitespace-nowrap hover:text-primary">Electronics</a>
-        <a href="#" class="whitespace-nowrap hover:text-primary">Fashion</a>
-        <a href="#" class="whitespace-nowrap hover:text-primary">Home & Living</a>
-        <a href="#" class="whitespace-nowrap hover:text-primary">Beauty</a>
-        <a href="#" class="whitespace-nowrap hover:text-primary">Sports</a>
-        <a href="#" class="whitespace-nowrap hover:text-primary">Toys</a>
-        <a href="#" class="whitespace-nowrap hover:text-primary">Groceries</a>
-        <a href="#" class="whitespace-nowrap hover:text-primary">Pets</a>
+        </div>
+        <div class="flex items-center space-x-4">
+          <a href="#" class="hidden md:inline text-sm hover:underline">Notifications</a>
+          <a href="#" class="text-sm hover:underline">Help</a>
+          <a href="#" class="text-sm hover:underline">Register</a>
+          <a href="#" class="text-sm hover:underline">Login</a>
+        </div>
       </div>
     </nav>
-
-    <!-- Hero Banner -->
-    <div class="bg-gray-100 py-4">
+    <!-- Main Header -->
+    <header class="bg-white shadow-sm py-4 px-2 sm:px-4">
+      <div class="container mx-auto flex flex-col sm:flex-row items-center">
+        <!-- Logo and Search on Mobile -->
+        <div class="flex w-full sm:w-auto justify-between items-center mb-2 sm:mb-0">
+          <div class="mr-4">
+            <a href="#" class="text-2xl sm:text-3xl font-bold text-primary">Taggo</a>
+          </div>
+          <div class="sm:hidden">
+            <a href="#" class="flex items-center">
+              <div class="relative">
+                <i data-feather="shopping-cart" class="w-6 h-6 text-gray-700"></i>
+                <span class="absolute -top-2 -right-2 bg-primary text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">3</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Search Bar -->
+        <div class="w-full sm:flex-1 relative sm:mx-4">
+          <div class="flex">
+            <input type="text" placeholder="Search for products" class="w-full py-2 px-4 border border-gray-300 rounded-l-md focus:outline-none focus:border-primary">
+            <button class="bg-primary text-white px-4 sm:px-6 rounded-r-md hover:bg-opacity-90">
+              <i data-feather="search" class="w-5 h-5"></i>
+            </button>
+          </div>
+          <div class="absolute bg-white w-full mt-1 shadow-lg rounded-md z-10 hidden">
+            <div class="p-2 border-b">
+              <p class="text-gray-600 text-sm">Recent searches</p>
+            </div>
+            <div class="p-2 hover:bg-gray-100">iPhone 13</div>
+            <div class="p-2 hover:bg-gray-100">Adidas shoes</div>
+          </div>
+        </div>
+        
+        <!-- Cart - Hidden on Mobile -->
+        <div class="hidden sm:block relative ml-4">
+          <a href="#" class="flex items-center">
+            <div class="relative">
+              <i data-feather="shopping-cart" class="w-6 h-6 text-gray-700"></i>
+              <span class="absolute -top-2 -right-2 bg-primary text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">3</span>
+            </div>
+            <span class="ml-2 hidden md:inline">Cart</span>
+          </a>
+        </div>
+      </div>
+    </header>
+    <!-- Categories Navigation -->
+    <nav class="bg-white shadow-sm py-3 px-2">
       <div class="container mx-auto">
-        <div class="flex">
-          <!-- Sidebar Categories -->
+        <div class="flex items-center space-x-4 overflow-x-auto pb-2">
+          <a href="#" class="whitespace-nowrap hover:text-primary text-sm sm:text-base">Electronics</a>
+          <a href="#" class="whitespace-nowrap hover:text-primary text-sm sm:text-base">Fashion</a>
+          <a href="#" class="whitespace-nowrap hover:text-primary text-sm sm:text-base">Home</a>
+          <a href="#" class="whitespace-nowrap hover:text-primary text-sm sm:text-base">Beauty</a>
+          <a href="#" class="whitespace-nowrap hover:text-primary text-sm sm:text-base">Sports</a>
+          <a href="#" class="whitespace-nowrap hover:text-primary text-sm sm:text-base">Toys</a>
+          <a href="#" class="whitespace-nowrap hover:text-primary text-sm sm:text-base">Food</a>
+          <a href="#" class="whitespace-nowrap hover:text-primary text-sm sm:text-base">Pets</a>
+        </div>
+      </div>
+    </nav>
+    <!-- Hero Banner -->
+    <div class="bg-gray-100 py-4 px-2">
+      <div class="container mx-auto">
+        <div class="flex flex-col md:flex-row">
+          <!-- Sidebar Categories - Mobile Dropdown -->
+          <div class="md:hidden mb-4">
+            <select class="w-full p-2 border rounded-md">
+              <option>All Categories</option>
+              <option>Mobile & Gadgets</option>
+              <option>Computers</option>
+              <option>Home Appliances</option>
+              <option>Fashion</option>
+              <option>Beauty</option>
+              <option>Books</option>
+            </select>
+          </div>
+          
+          <!-- Sidebar Categories - Desktop -->
           <div class="w-64 bg-white rounded-md shadow-sm p-4 mr-4 hidden md:block">
-            <h3 class="font-bold mb-4">All Categories</h3>
+<h3 class="font-bold mb-4">All Categories</h3>
             <ul class="space-y-3">
               <li><a href="mobile.html" class="hover:text-primary flex items-center"><i data-feather="smartphone" class="w-4 h-4 mr-2"></i> Mobile & Gadgets</a></li>
               <li><a href="computers.html" class="hover:text-primary flex items-center"><i data-feather="monitor" class="w-4 h-4 mr-2"></i> Computers</a></li>
@@ -97,7 +121,7 @@
               <li><a href="fashion.html" class="hover:text-primary flex items-center"><i data-feather="tshirt" class="w-4 h-4 mr-2"></i> Fashion</a></li>
               <li><a href="beauty.html" class="hover:text-primary flex items-center"><i data-feather="heart" class="w-4 h-4 mr-2"></i> Beauty</a></li>
               <li><a href="books.html" class="hover:text-primary flex items-center"><i data-feather="book" class="w-4 h-4 mr-2"></i> Books</a></li>
-            </ul>
+</ul>
           </div>
           
           <!-- Main Banner -->
@@ -119,22 +143,21 @@
     <!-- Flash Sale Section -->
     <section class="py-8 bg-white">
       <div class="container mx-auto">
-        <div class="flex items-center mb-6">
-          <div class="flex items-center">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center mb-6">
+          <div class="flex items-center mb-2 sm:mb-0">
             <div class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center mr-3">
               <i data-feather="zap" class="w-4 h-4"></i>
             </div>
             <h2 class="text-xl font-bold">Flash Sale</h2>
           </div>
-          <div class="ml-6 flex items-center">
+          <div class="ml-0 sm:ml-6 flex items-center mb-2 sm:mb-0">
             <span class="text-sm text-gray-500 mr-2">Ends in</span>
             <div class="bg-gray-800 text-white px-2 py-1 rounded text-sm font-medium">12:34:56</div>
           </div>
-          <a href="#" class="ml-auto text-primary hover:underline">See All</a>
+          <a href="#" class="ml-auto text-primary hover:underline mt-2 sm:mt-0">See All</a>
         </div>
-        
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-          <!-- Product Card 1 -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2 sm:gap-4">
+<!-- Product Card 1 -->
           <div class="product-card bg-white rounded-md shadow-sm overflow-hidden transition-all duration-300">
             <div class="relative">
               <img src="http://static.photos/technology/320x240/1" alt="Product" class="w-full h-48 object-cover">
@@ -331,63 +354,105 @@
       </div>
     </section>
 
-     <!-- Footer -->
-  <footer class="bg-gray-100 py-8 mt-12">
-    <div class="container mx-auto">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-        <div>
-          <h3 class="font-bold mb-4">Customer Service</h3>
-          <ul class="space-y-2">
-            <li><a href="#" class="text-gray-600 hover:text-primary text-sm">Help Center</a></li>
-            <li><a href="#" class="text-gray-600 hover:text-primary text-sm">How to Buy</a></li>
-            <li><a href="#" class="text-gray-600 hover:text-primary text-sm">Returns & Refunds</a></li>
-            <li><a href="#" class="text-gray-600 hover:text-primary text-sm">Contact Us</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="font-bold mb-4">About Taggo</h3>
-          <ul class="space-y-2">
-            <li><a href="#" class="text-gray-600 hover:text-primary text-sm">About Us</a></li>
-            <li><a href="#" class="text-gray-600 hover:text-primary text-sm">Taggo Careers</a></li>
-            <li><a href="#" class="text-gray-600 hover:text-primary text-sm">Taggo Policies</a></li>
-            <li><a href="#" class="text-gray-600 hover:text-primary text-sm">Privacy Policy</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="font-bold mb-4">Payment</h3>
-          <div class="flex flex-wrap gap-2">
-            <img src="https://via.placeholder.com/40x25" alt="Visa" class="border rounded">
-            <img src="https://via.placeholder.com/40x25" alt="Mastercard" class="border rounded">
-            <img src="https://via.placeholder.com/40x25" alt="PayPal" class="border rounded">
+    <!-- Footer -->
+    <footer class="bg-gray-100 py-8 mt-12">
+      <div class="container mx-auto">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div>
+            <h3 class="font-bold mb-4">Customer Service</h3>
+            <ul class="space-y-2">
+              <li><a href="#" class="text-gray-600 hover:text-primary text-sm">Help Center</a></li>
+              <li><a href="#" class="text-gray-600 hover:text-primary text-sm">How to Buy</a></li>
+              <li><a href="#" class="text-gray-600 hover:text-primary text-sm">Returns & Refunds</a></li>
+              <li><a href="#" class="text-gray-600 hover:text-primary text-sm">Contact Us</a></li>
+            </ul>
+          </div>
+          <div>
+              <h3 class="font-bold mb-4">About Taggo</h3>
+              <ul class="space-y-2">
+                <li><a href="#" class="text-gray-600 hover:text-primary text-sm">About Us</a></li>
+                <li><a href="#" class="text-gray-600 hover:text-primary text-sm">Taggo Careers</a></li>
+                <li><a href="#" class="text-gray-600 hover:text-primary text-sm">Taggo Policies</a></li>
+<li><a href="#" class="text-gray-600 hover:text-primary text-sm">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-bold mb-4">Payment</h3>
+            <div class="flex flex-wrap gap-2">
+              <img src="https://via.placeholder.com/40x25" alt="Visa" class="border rounded">
+              <img src="https://via.placeholder.com/40x25" alt="Mastercard" class="border rounded">
+              <img src="https://via.placeholder.com/40x25" alt="PayPal" class="border rounded">
+            </div>
+          </div>
+          <div>
+            <h3 class="font-bold mb-4">Follow Us</h3>
+            <div class="flex space-x-4">
+              <a href="#" class="text-gray-600 hover:text-primary"><i data-feather="facebook" class="w-5 h-5"></i></a>
+              <a href="#" class="text-gray-600 hover:text-primary"><i data-feather="instagram" class="w-5 h-5"></i></a>
+              <a href="#" class="text-gray-600 hover:text-primary"><i data-feather="twitter" class="w-5 h-5"></i></a>
+            </div>
           </div>
         </div>
-        <div>
-          <h3 class="font-bold mb-4">Follow Us</h3>
-          <div class="flex space-x-4">
-            <a href="#" class="text-gray-600 hover:text-primary"><i data-feather="facebook" class="w-5 h-5"></i></a>
-            <a href="#" class="text-gray-600 hover:text-primary"><i data-feather="instagram" class="w-5 h-5"></i></a>
-            <a href="#" class="text-gray-600 hover:text-primary"><i data-feather="twitter" class="w-5 h-5"></i></a>
-          </div>
-        </div>
+        <div class="border-t mt-8 pt-8 text-center text-sm text-gray-500">
+          <p>© 2023 Taggo. All Rights Reserved.</p>
+</div>
       </div>
-      <div class="border-t mt-8 pt-8 text-center text-sm text-gray-500">
-        <p>© 2023 Taggo. All Rights Reserved.</p>
+    </footer>
+    <!-- Floating Cart Button - Hidden on mobile as we have bottom nav -->
+    <div class="fixed bottom-8 right-8 z-50 hidden sm:block">
+      <button class="floating-cart bg-primary text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all">
+        <i data-feather="shopping-cart" class="w-6 h-6"></i>
+        <span class="absolute -top-1 -right-1 bg-white text-primary text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold">3</span>
+      </button>
+    </div>
+
+    <!-- Mobile Bottom Navigation -->
+    <div class="fixed bottom-0 left-0 right-0 bg-white shadow-lg z-40 sm:hidden">
+      <div class="flex justify-around items-center py-3">
+        <a href="#" class="flex flex-col items-center text-gray-700">
+          <i data-feather="home" class="w-5 h-5"></i>
+          <span class="text-xs mt-1">Home</span>
+        </a>
+        <a href="#" class="flex flex-col items-center text-gray-700">
+          <i data-feather="search" class="w-5 h-5"></i>
+          <span class="text-xs mt-1">Search</span>
+        </a>
+        <a href="#" class="flex flex-col items-center text-primary">
+          <div class="relative">
+            <i data-feather="shopping-cart" class="w-5 h-5"></i>
+            <span class="absolute -top-1 -right-1 bg-primary text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">3</span>
+          </div>
+          <span class="text-xs mt-1">Cart</span>
+        </a>
+        <a href="#" class="flex flex-col items-center text-gray-700">
+          <i data-feather="user" class="w-5 h-5"></i>
+          <span class="text-xs mt-1">Account</span>
+        </a>
       </div>
     </div>
-  </footer>
-
-  <!-- Floating Cart Button -->
-  <div class="fixed bottom-8 right-8 z-50">
-    <button class="floating-cart bg-primary text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all relative">
-      <i data-feather="shopping-cart" class="w-6 h-6"></i>
-      <span
-        class="absolute -top-1 -right-1 bg-white text-primary text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold">3</span>
-    </button>
-  </div>
-
-  <!-- Ativar Feather Icons -->
-  <script>
-    feather.replace();
-  </script>
+    <!-- Mobile Bottom Navigation -->
+    <div class="fixed bottom-0 left-0 right-0 bg-white shadow-lg z-40 sm:hidden">
+      <div class="flex justify-around items-center py-3">
+        <a href="index.html" class="flex flex-col items-center text-gray-700">
+          <i data-feather="home" class="w-5 h-5"></i>
+          <span class="text-xs mt-1">Home</span>
+        </a>
+        <a href="#" class="flex flex-col items-center text-gray-700">
+          <i data-feather="search" class="w-5 h-5"></i>
+          <span class="text-xs mt-1">Search</span>
+        </a>
+        <a href="#" class="flex flex-col items-center text-primary">
+          <div class="relative">
+            <i data-feather="shopping-cart" class="w-5 h-5"></i>
+            <span class="absolute -top-1 -right-1 bg-primary text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">3</span>
+          </div>
+          <span class="text-xs mt-1">Cart</span>
+        </a>
+        <a href="#" class="flex flex-col items-center text-gray-700">
+          <i data-feather="user" class="w-5 h-5"></i>
+          <span class="text-xs mt-1">Account</span>
+        </a>
+      </div>
+    </div>
 </body>
 </html>
