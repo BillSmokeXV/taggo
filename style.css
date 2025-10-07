@@ -1,0 +1,41 @@
+
+/* General Styles */
+body {
+  background-color: #f9fafb;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Navigation */
+nav.bg-primary {
+  background-color: #EE4D2D;
+}
+
+/* Dropdown */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Product Cards */
+.product-card {
+  transition: all 0.3s ease;
+}
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Floating Cart Animation */
+.floating-cart {
+  animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Color Variables */
+:root {
+  --primary: #EE4D2D;
+  --secondary: #FFBDA6;
+}

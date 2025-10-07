@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Carrinho | Taggo</title>
+  <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Feather Icons -->
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
+  <!-- CSS e JS externos -->
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+
+<body class="bg-gray-50">
+
+  <!-- Header -->
+  <header class="bg-white shadow-sm py-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <a href="index.html" class="text-3xl font-bold text-primary">Taggo</a>
+      <h1 class="text-xl font-semibold">Meu Carrinho</h1>
+      <a href="#" class="text-primary hover:underline">Ajuda</a>
+    </div>
+  </header>
+
+  <!-- Carrinho -->
+  <main class="container mx-auto my-8">
+    <div class="bg-white rounded-md shadow-sm p-6">
+      <div class="flex flex-col md:flex-row md:space-x-6">
+
+        <!-- Lista de produtos -->
+        <div class="flex-1">
+          <!-- Produto -->
+          <div class="flex items-center border-b border-gray-200 py-4">
+            <input type="checkbox" class="mr-4 accent-primary">
+            <img src="http://static.photos/technology/320x240/1" alt="Produto" class="w-24 h-24 rounded object-cover mr-4">
+            <div class="flex-1">
+              <h3 class="font-medium text-gray-800">Smartphone X Pro 128GB</h3>
+              <p class="text-sm text-gray-500">Cor: Preto | Armazenamento: 128GB</p>
+              <div class="mt-2 flex items-center space-x-4">
+                <span class="text-primary font-bold text-lg">R$ 299,00</span>
+                <span class="text-gray-400 line-through text-sm">R$ 599,00</span>
+              </div>
+            </div>
+            <div class="flex items-center space-x-2">
+              <button class="px-3 py-1 border rounded hover:bg-gray-100" onclick="diminuirQtd(this)">-</button>
+              <span class="w-8 text-center">1</span>
+              <button class="px-3 py-1 border rounded hover:bg-gray-100" onclick="aumentarQtd(this)">+</button>
+            </div>
+            <button class="ml-6 text-red-500 hover:text-red-700" onclick="removerProduto(this)">
+              <i data-feather="trash-2"></i>
+            </button>
+          </div>
+
+          <!-- Produto -->
+          <div class="flex items-center border-b border-gray-200 py-4">
+            <input type="checkbox" class="mr-4 accent-primary">
+            <img src="http://static.photos/technology/320x240/2" alt="Produto" class="w-24 h-24 rounded object-cover mr-4">
+            <div class="flex-1">
+              <h3 class="font-medium text-gray-800">Headphone Bluetooth</h3>
+              <p class="text-sm text-gray-500">Cor: Branco</p>
+              <div class="mt-2 flex items-center space-x-4">
+                <span class="text-primary font-bold text-lg">R$ 49,00</span>
+                <span class="text-gray-400 line-through text-sm">R$ 70,00</span>
+              </div>
+            </div>
+            <div class="flex items-center space-x-2">
+              <button class="px-3 py-1 border rounded hover:bg-gray-100" onclick="diminuirQtd(this)">-</button>
+              <span class="w-8 text-center">1</span>
+              <button class="px-3 py-1 border rounded hover:bg-gray-100" onclick="aumentarQtd(this)">+</button>
+            </div>
+            <button class="ml-6 text-red-500 hover:text-red-700" onclick="removerProduto(this)">
+              <i data-feather="trash-2"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Resumo do pedido -->
+        <div class="w-full md:w-80 bg-gray-50 border border-gray-200 rounded-md p-4 mt-6 md:mt-0">
+          <h2 class="font-semibold text-lg mb-4">Resumo do Pedido</h2>
+          <div class="flex justify-between mb-2">
+            <span>Subtotal</span>
+            <span>R$ 348,00</span>
+          </div>
+          <div class="flex justify-between mb-2">
+            <span>Frete</span>
+            <span>R$ 15,00</span>
+          </div>
+          <div class="border-t border-gray-300 my-3"></div>
+          <div class="flex justify-between font-bold text-lg mb-4">
+            <span>Total</span>
+            <span>R$ 363,00</span>
+          </div>
+          <button class="w-full bg-primary text-white py-2 rounded-md hover:bg-opacity-90 transition">
+            Finalizar Compra
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 py-6 mt-12 text-center text-gray-500 text-sm">
+    © 2025 Taggo. Todos os direitos reservados.
+  </footer>
+
+  <script>
+    feather.replace();
+
+    function aumentarQtd(btn) {
+      const span = btn.parentNode.querySelector('span');
+      span.textContent = parseInt(span.textContent) + 1;
+    }
+
+    function diminuirQtd(btn) {
+      const span = btn.parentNode.querySelector('span');
+      if (parseInt(span.textContent) > 1) {
+        span.textContent = parseInt(span.textContent) - 1;
+      }
+    }
+
+    function removerProduto(btn) {
+      btn.closest('.flex.items-center').remove();
+    }
+  </script>
+
+</body>
+</html>
